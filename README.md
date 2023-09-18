@@ -1,2 +1,3 @@
-# pixel-navigator
-Official GitHub Repository for Paper "Bridging Zero-shot Object Navigation and Foundation Models through Pixel-Guided Navigation Skill", Arxiv 2023
+# Pixel-Navigator
+This is the offficial gitHub repository for paper "Bridging Zero-shot Object Navigation and Foundation Models through Pixel-Guided Navigation Skill".
+The code and checkpoints will be released soon.
