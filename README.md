@@ -3,7 +3,7 @@ Zero-shot object navigation is a challenging task for home-assistance robots. Th
 
 <img width="806" alt="image" src="https://github.com/wzcai99/Pixel-Navigator/assets/115710611/3044748d-e9fc-493e-81a7-e9ae34a08259">
 
-> [**Bridging Zero-Shot Object Navigation and Foundation Models through Pixel-Guided Navigation Skill**](). 
+> [**Bridging Zero-Shot Object Navigation and Foundation Models through Pixel-Guided Navigation Skill**](https://arxiv.org/abs/2309.10309). 
 > Wenzhe Cai, Siyuan Huang, Guangran Cheng, Yuxing Long, Peng Gao, Changyin Sun, Hao Dong. 
 
 Codes and Models will be released soon.
