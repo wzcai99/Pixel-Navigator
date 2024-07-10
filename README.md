@@ -33,7 +33,7 @@ export OPENAI_API_ENDPOINT=<YOUR_ENDPOINT>
 | :------: | :--------: | :------: | :------: |
 | Object Detection | GroundingDINO | [groundingdion_swinb_cogcoor.pth](https://drive.google.com/file/d/1kSH6AhUBrr-CxMrm4J3A9Pv__3WlCjDH/view?usp=drive_link) | GroundingDINO_SwinB_cfg.py |
 | Object Segmentation | SAM | [sam_vit_h_4b8939.pth](https://drive.google.com/file/d/1cc6fk71zAK_8HJQltAKyM65nlcoN1eh1/view?usp=drive_link) | vit-h |
-| Navigation Skill | PixelNav | [Checkpoint_A](https://drive.google.com/file/d/14iPb5buFOqEMuc_Luc_ShbVoo8xEIklu/view?usp=drive_link), [Checkpoint_B](https://drive.google.com/file/d/1oun6dLW627A4PwQ5AMqbg3mqpLdL0EEr/view?usp=drive_link) | ---- |
+| Navigation Skill | PixelNav | [Checkpoint_A](https://drive.google.com/file/d/14iPb5buFOqEMuc_Luc_ShbVoo8xEIklu/view?usp=drive_link), [Checkpoint_B](https://drive.google.com/file/d/1oun6dLW627A4PwQ5AMqbg3mqpLdL0EEr/view?usp=drive_link), [Chekcpoint_C](https://drive.google.com/file/d/1BSCpZ98iQytDHuIdiUYXJr_4DkX56AdW/view?usp=drive_link)| ---- |
 
 
 We provide several different checkpoint for pixel navigation skill, which is trained on different dataset (scale,scenes..). You can make a choice for your own projects.  
@@ -46,12 +46,13 @@ Open the constants.py file and make sure you have prepared for all the input dir
 python evaluate_policy.py --prefix=hm3d --difficulty=easy --sensor_height=0.88 --image_hfov=79
 ```
 The python code will automatically record the navigation process into the ./PREFIX_eval_trajectory/. The left side of the mp4 file records the image at the first frame and a pixel goal indicated as the blue dots. The right side of the mp4 file records the video stream of the navigation process and the estimated pixel goal and temporal distance. Examples show as follows: 
-<video controls>
-    <source src="./assets/fps_mp3d.mp4" type="video/mp4">
-</video>
-<video controls>
-    <source src="./assets/fps_hm3d.mp4" type="video/mp4">
-</video>
+
+
+https://github.com/wzcai99/Pixel-Navigator/assets/115710611/bb16d54e-b280-4b4d-a07f-5afe0fe9c297
+
+https://github.com/wzcai99/Pixel-Navigator/assets/115710611/d4e9b168-9e74-4b5c-badd-5caf1ac211f8
+
+
 
 ### Evaluate the ObjNav Benchmark ###
 Open the constants.py file and make sure you have prepared for all the input directory and checkpoint path. Then run the following command:
@@ -59,21 +60,15 @@ Open the constants.py file and make sure you have prepared for all the input dir
 python objnav_benchmark.py --checkpoint=<PIXELNAV_CHECKPOINT_PATH>
 ```
 If everything goes well, you will see a new /tmp directory saving recording the navigation process. Examples show as below:
-<div style="display: flex; justify-content: space-between;">
-    <video width=480 height=360 controls>
-        <source src="./assets/objnav_fps.mp4" type="video/mp4">
-    </video>
-    <video width=480 height=360 controls>
-        <source src="./assets/objnav_metric.mp4" type="video/mp4">
-    </video>
-</div>
-<div style="display: flex; justify-content: space-between;">
-    <video width=480 height=360 controls>
-        <source src="./assets/objnav_fps2.mp4" type="video/mp4">
-    </video>
-    <video width=480 height=360 controls>
-        <source src="./assets/objnav_metric2.mp4" type="video/mp4">
-    </video>
-</div>
+
+
+
+https://github.com/wzcai99/Pixel-Navigator/assets/115710611/64b5b079-2b48-4f35-a9a6-92a3e02298f9
+
+
+https://github.com/wzcai99/Pixel-Navigator/assets/115710611/6a3d3a4d-d108-4d69-91e0-10e7a14c26c0
+
+
+
 
 

@@ -4,7 +4,6 @@ import numpy as np
 import quaternion
 import time
 from policy_network import PixelNav_Policy
-from data_utils.geometry_tools import *
 
 class Policy_Agent:
     def __init__(self,model_path="./checkpoints/navigator.ckpt",max_token_length=64,image_size=224,device="cuda:0"):
