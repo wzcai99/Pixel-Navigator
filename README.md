@@ -33,7 +33,7 @@ export OPENAI_API_ENDPOINT=<YOUR_ENDPOINT>
 | :------: | :--------: | :------: | :------: |
 | Object Detection | GroundingDINO | [groundingdion_swinb_cogcoor.pth](https://drive.google.com/file/d/1kSH6AhUBrr-CxMrm4J3A9Pv__3WlCjDH/view?usp=drive_link) | GroundingDINO_SwinB_cfg.py |
 | Object Segmentation | SAM | [sam_vit_h_4b8939.pth](https://drive.google.com/file/d/1cc6fk71zAK_8HJQltAKyM65nlcoN1eh1/view?usp=drive_link) | vit-h |
-| Navigation Skill | PixelNav | [Checkpoint_A](https://drive.google.com/file/d/14iPb5buFOqEMuc_Luc_ShbVoo8xEIklu/view?usp=drive_link), [Checkpoint_B](https://drive.google.com/file/d/1oun6dLW627A4PwQ5AMqbg3mqpLdL0EEr/view?usp=drive_link), [Chekcpoint_C](https://drive.google.com/file/d/1BSCpZ98iQytDHuIdiUYXJr_4DkX56AdW/view?usp=drive_link)| ---- |
+| Navigation Skill | PixelNav | [Checkpoint_A](https://drive.google.com/file/d/14iPb5buFOqEMuc_Luc_ShbVoo8xEIklu/view?usp=drive_link),[Chekcpoint_B](https://drive.google.com/file/d/1BSCpZ98iQytDHuIdiUYXJr_4DkX56AdW/view?usp=drive_link)| ---- |
 
 
 We provide several different checkpoint for pixel navigation skill, which is trained on different dataset (scale,scenes..). You can make a choice for your own projects.  
