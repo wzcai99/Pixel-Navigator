@@ -10,7 +10,7 @@ from tqdm import tqdm
 from constants import *
 from config_utils import hm3d_config
 from gpt4v_planner import GPT4V_Planner
-from policy_agent import Policy_Agent,Oracle_Agent
+from policy_agent import Policy_Agent
 from cv_utils.detection_tools import initialize_dino_model
 from cv_utils.segmentation_tools import initialize_sam_model
 from habitat.utils.visualizations.maps import colorize_draw_agent_and_fit_to_height
