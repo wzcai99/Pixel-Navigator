@@ -68,7 +68,18 @@ https://github.com/wzcai99/Pixel-Navigator/assets/115710611/64b5b079-2b48-4f35-a
 
 https://github.com/wzcai99/Pixel-Navigator/assets/115710611/6a3d3a4d-d108-4d69-91e0-10e7a14c26c0
 
-
+## BibTex
+Please cite our paper if you find it helpful :)
+```
+@inproceedings{cai2024bridging,
+  title={Bridging zero-shot object navigation and foundation models through pixel-guided navigation skill},
+  author={Cai, Wenzhe and Huang, Siyuan and Cheng, Guangran and Long, Yuxing and Gao, Peng and Sun, Changyin and Dong, Hao},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={5228--5234},
+  year={2024},
+  organization={IEEE}
+}
+```
 
 
 
