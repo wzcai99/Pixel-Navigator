@@ -81,19 +81,13 @@ class GPT4V_Planner:
             try:
                 raw_answer = gptv_response(text_content,inference_image,GPT4V_PROMPT)
                 print("GPT-4V Output Response: %s"%raw_answer)
-                answer = raw_answer.replace(" ","")
+                answer = raw_answer
                 answer = answer[answer.index("{"):answer.index("}")+1]
                 answer = ast.literal_eval(answer)
                 if 'Reason' in answer.keys() and 'Angle' in answer.keys():
                     break
                 assert answer['Angle'] in angles
             except:
-                angle = np.random.randint(0,12) * 30
-                raw_answer = "{'Reason':'The toilet is visible at Angle %d', 'Angle':%d}"%(angle,angle)
-                answer = raw_answer.replace(" ","")
-                answer = answer[answer.index("{"):answer.index("}")+1]
-                answer = ast.literal_eval(answer)
-                print("Warning: %s"%raw_answer)
                 continue
         self.gptv_trajectory.append("GPT-4V Answer:\n%s"%raw_answer)
         self.panoramic_trajectory.append(inference_image)

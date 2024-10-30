@@ -63,6 +63,7 @@ for i in tqdm(range(args.eval_episodes)):
     os.makedirs(dir,exist_ok=False)
     fps_writer = imageio.get_writer("%s/fps.mp4"%dir, fps=4)
     topdown_writer = imageio.get_writer("%s/metric.mp4"%dir,fps=4)
+    heading_offset = 0
 
     nav_planner.reset(habitat_env.current_episode.object_category)
     episode_images = [obs['rgb']]
@@ -89,12 +90,30 @@ for i in tqdm(range(args.eval_episodes)):
     while not habitat_env.episode_over:
         action,skill_image = nav_executor.step(obs['rgb'],habitat_env.sim.previous_step_collided)
         if action != 0 or goal_flag:
+            if action == 4:
+                heading_offset += 1
+            elif action == 5:
+                heading_offset -= 1
             obs = habitat_env.step(action)
             episode_images.append(obs['rgb'])
             episode_topdowns.append(adjust_topdown(habitat_env.get_metrics()))
         else:
             if habitat_env.episode_over:
                 break
+            
+            for _ in range(0,abs(heading_offset)):
+                if habitat_env.episode_over:
+                    break
+                if heading_offset > 0:
+                    obs = habitat_env.step(5)
+                    episode_images.append(obs['rgb'])
+                    episode_topdowns.append(adjust_topdown(habitat_env.get_metrics()))
+                    heading_offset -= 1
+                elif heading_offset < 0:
+                    obs = habitat_env.step(4)
+                    episode_images.append(obs['rgb'])
+                    episode_topdowns.append(adjust_topdown(habitat_env.get_metrics()))
+                    heading_offset += 1
             
             # a whole round planning process
             for _ in range(11):
