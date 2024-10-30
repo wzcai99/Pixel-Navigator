@@ -1,0 +1,6 @@
+[submodule "thirdparty/GroundingDINO"]
+	path = thirdparty/GroundingDINO
+	url = https://github.com/IDEA-Research/GroundingDINO
+[submodule "thirdparty/segment-anything"]
+	path = thirdparty/segment-anything
+	url = https://github.com/facebookresearch/segment-anything.git
